@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="html--sticky" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | coolie</title>
+    <!--coolie-->
+    <link rel="stylesheet" href="/lib/vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/lib/vendor/hint.css">
+    <link rel="stylesheet" href="/lib/app/app.css">
+    <link rel="stylesheet" href="/lib/app/app-header.css">
+    <link rel="stylesheet" href="/lib/app/app-footer.css">
+    <!--/coolie-->
+    <link rel="stylesheet" href="/index/index.css">
+</head>
+<body class="body--sticky body--home">
+    <div>
+        <div class="container-fluid app__header">
+            <div class="container">
+                <nav>
+                    <ul class="nav nav-pills pull-right">
+                        <li role="presentation"><a href="/index.html"><span class="hint--right hint--info" data-hint="Home"><span class="glyphicon glyphicon-home"></span> Home<span></a></li>
+                        <li role="presentation"><a href="/about/about.html"><span class="hint--right" data-hint="About"><span class="glyphicon glyphicon-heart"></span> About<span></a></li>
+                    </ul>
+                </nav>
+                <h1 class="text-muted app__header-brand">前端工程模版 <span class="glyphicon glyphicon-heart"></span> <a href="https://coolie.ydr.me"><code>coolie@1.10.7</code></a></h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="jumbotron">
+                <h2>coolie 建立了一套无痛切入的前端构建工具</h2>
+                <p>在初期就基本确定了以下原则：</p>
+                <ul>
+                    <li>最小程度的不影响现有代码的运行</li>
+                    <li>不编译，直接运行</li>
+                    <li>通用化，可以满足大部分开发场景</li>
+                    <li>模块化</li>
+                    <li>智能化，无须人工介入即可完成所有工作</li>
+                    <li>静态化，拿来即用，不需要频繁修改配置文件</li>
+                </ul>
+                <p><strong>我最看重的就是不构建也可以正常发布运行, 因此不会加重前端的技术债务</strong></p>
+                <hr>
+                
+                <h2>假设网站项目依赖的库</h2>
+                <ul>
+                    <li>jQuery.js</li>
+                    <li>Bootstrap css/js</li>
+                    <li>hint.css</li>
+                    <li>app 公共模块 css/js</li>
+                </ul>
+
+                <h2>依赖图片</h2>
+                <div>
+                    直接的 img <img src="lib/app/res/award.png">
+                </div>
+
+                <h2>依赖样式</h2>
+                <div>
+                    <ul>
+                        <li class="index-list-1">图片背景</li>
+                        <li class="index-list-2">图片背景 base64</li>
+                    </ul>
+                    <p>另一个图片背景 <span class="app__logo"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="app__footer app__footer--sticky">
+        <div class="container">
+            <p class="text-muted">© 2016 Company, Inc.</p>
+        </div>
+    </footer>
+
+    <!--coolie-->
+    <script src="/lib/vendor/jquery.js"></script>
+    <script src="/lib/vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="/lib/app/app.js"></script>
+    <!--/coolie-->
+    <script src="/index/index.js"></script>
+</body>
+</html>

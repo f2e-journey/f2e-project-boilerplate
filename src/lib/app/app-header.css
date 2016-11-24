@@ -1,0 +1,11 @@
+.app__header {
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+}
+.app__header-brand {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 36px;
+}

@@ -1,0 +1,12 @@
+.app__footer {
+    background-color: #f5f5f5;
+}
+.app__footer p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.app__footer--sticky {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
