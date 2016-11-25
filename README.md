@@ -1,6 +1,11 @@
-# 前端工程模版项目
+# 前端工程模版(简单版)项目
 
 这是一个前端工程项目的模版, 可以写一些项目的说明, 例如项目的初衷, 目录说明, 线上地址, 配置说明等等
+
+* [前端工程模版(简单版)](https://github.com/f2e-journey/f2e-project-boilerplate)
+  * 通过 [coolie](https://coolie.ydr.me/introduction/advantage/) 合并 CSS/JS, 并对静态资源进行版本管理
+* [前端工程模版(模块化版)](https://github.com/f2e-journey/f2e-project-boilerplate/tree/module-coolie)
+  * 通过 [coolie](https://coolie.ydr.me/guide/build-chunk-module/) 进行模块化开发
 
 ## 准备环境
 
