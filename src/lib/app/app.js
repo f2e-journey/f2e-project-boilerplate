@@ -1,4 +1,6 @@
-(function() {
+define(function(require, exports, module) {
+    var $ = require('../vendor/jquery.js');
+
     console.log('app.js');
 
     function initSiteNav() {
@@ -12,4 +14,4 @@
     }
 
     initSiteNav();
-})();
+});

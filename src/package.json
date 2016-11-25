@@ -1,7 +1,7 @@
 {
   "name": "f2e-project-boilerplate",
   "version": "0.1.0",
-  "description": "前端工程模版",
+  "description": "前端工程模版(模块化版)",
   "main": "coolie.config.js",
   "scripts": {
     "start": "puer",

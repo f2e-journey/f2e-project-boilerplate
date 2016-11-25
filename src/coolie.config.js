@@ -5,7 +5,7 @@
  * 当前配置文件所在的目录为构建的根目录
  *
  * @link http://coolie.ydr.me/guide/coolie.config.js/
- * @author ydr.me
+ * @author ufologist
  * @version 1.10.7
  * =======================================================
  */
@@ -18,7 +18,7 @@ var distDir = '../dist/';
 var staticDir = './static';
 
 module.exports = function (coolie) {
-    // coolie 配置
+    // coolie 构建配置
     coolie.config({
         // 是否在构建之前清空目标目录
         clean: true,
@@ -27,33 +27,40 @@ module.exports = function (coolie) {
         dest: {
             // 目标目录，相对于当前文件
             dirname: distDir,
-            // 目标根域
-            // host: '//cdn.domain.com/',
+
+            // 目标根域, 一般发布到正式环境的时候才需要, 例如发布到阿里云 OSS
+            // host: '//cdn.com/a',
+
             // 版本号长度
-            // 为什么是 7 位, 参考 github 的 commit hash 的显示方式, 例如: Latest commit 2aa0087  5 days ago
+            // 为什么是 7 位, 参考 github 的 commit hash 的显示方式,
+            // 例如: Latest commit 2aa0087  5 days ago
             versionLength: 7
         },
 
         // js 构建
         js: {
             // 入口模块，相对于当前文件
-            // main: [
-            //     // 支持 glob 语法
-            //     'index/index.js'
-            // ],
+            main: [
+                // 支持 glob 语法
+                'index/index.js',
+                'about/about.js'
+            ],
             // coolie-config.js 路径，相对于当前文件
-            // 'coolie-config.js': 'module-config.js',
+            'coolie-config.js': 'module-config.js',
             // js 文件保存目录，相对于 dest.dirname
             dest: staticDir + '/js/',
             // 分块配置
-            // chunk: [],
+            chunk: [
+                'lib/vendor/**', // 将第三方库做为一个独立的分块, 会合并成一个 js 文件, 便于多页面共享
+                'lib/app/**'     // 将 app 模块做为一个独立的分块
+            ],
             // js 压缩配置
+            // XXX 由于 coolie-cli 没有很好的实现 minify 参数, 需要自己修改
+            // coolie/parse/coolie.config.js#check.js 中的关于 configs.uglifyJSOptions 的逻辑
             minify: {
+                drop_console: true,
                 global_defs: {
-                    DEBUG: false,
-                    drop_console: true
-                    // compress: {
-                    // }
+                    DEBUG: false
                 }
             }
         },
@@ -63,8 +70,7 @@ module.exports = function (coolie) {
             // html 文件，相对于当前文件
             src: [
                 // 支持 glob 语法
-                '**/*.html',
-                '!lib/app/partial/*.html'
+                '**/*.html'
             ],
             // html 压缩配置
             minify: true

@@ -2,7 +2,7 @@
 <html class="html--sticky" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About | coolie</title>
+    <title>About | 前端工程模版(模块化版)</title>
     <!--coolie-->
     <link rel="stylesheet" href="/lib/vendor/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="/lib/vendor/hint.css">
@@ -22,7 +22,7 @@
                         <li role="presentation"><a href="/about/about.html"><span class="hint--right" data-hint="About"><span class="glyphicon glyphicon-heart"></span> About<span></a></li>
                     </ul>
                 </nav>
-                <h1 class="text-muted app__header-brand">前端工程模版 <span class="glyphicon glyphicon-heart"></span> <a href="https://coolie.ydr.me"><code>coolie@1.10.7</code></a></h1>
+                <h1 class="text-muted app__header-brand">前端工程模版(模块化版) <span class="glyphicon glyphicon-heart"></span> <a href="https://coolie.ydr.me"><code>coolie@1.10.7</code></a></h1>
             </div>
         </div>
         <div class="container">
@@ -37,11 +37,9 @@
         </div>
     </footer>
 
-    <!--coolie-->
-    <script src="/lib/vendor/jquery.js"></script>
-    <script src="/lib/vendor/bootstrap/js/bootstrap.js"></script>
-    <script src="/lib/app/app.js"></script>
-    <!--/coolie-->
-    <script src="about.js"></script>
+    <script coolie
+            src="/lib/vendor/coolie.js"
+            data-config="/module-config.js"
+            data-main="about/about.js"></script>
 </body>
 </html>

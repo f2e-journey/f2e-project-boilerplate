@@ -2,7 +2,7 @@
 <html class="html--sticky" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home | coolie</title>
+    <title>Home | 前端工程模版(模块化版)</title>
     <!--coolie-->
     <link rel="stylesheet" href="/lib/vendor/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="/lib/vendor/hint.css">
@@ -22,10 +22,14 @@
                         <li role="presentation"><a href="/about/about.html"><span class="hint--right" data-hint="About"><span class="glyphicon glyphicon-heart"></span> About<span></a></li>
                     </ul>
                 </nav>
-                <h1 class="text-muted app__header-brand">前端工程模版 <span class="glyphicon glyphicon-heart"></span> <a href="https://coolie.ydr.me"><code>coolie@1.10.7</code></a></h1>
+                <h1 class="text-muted app__header-brand">前端工程模版(模块化版) <span class="glyphicon glyphicon-heart"></span> <a href="https://coolie.ydr.me"><code>coolie@1.10.7</code></a></h1>
             </div>
         </div>
         <div class="container">
+            <div class="alert alert-info fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <p><strong>模块化版: </strong>如果网站复杂度增加, 推荐进行<a href="https://coolie.ydr.me/introduction/module-development/">模块化开发</a>, 否则推荐使用<a href="https://github.com/f2e-journey/f2e-project-boilerplate">简单版</a></p>
+            </div>
             <div class="jumbotron">
                 <h2>coolie 建立了一套无痛切入的前端构建工具</h2>
                 <p>在初期就基本确定了以下原则：</p>
@@ -42,6 +46,7 @@
                 
                 <h2>假设网站项目依赖的库</h2>
                 <ul>
+                    <li><a href="https://github.com/cooliejs/coolie.js">coolie.js(模块化版才需要)</a></li>
                     <li>jQuery.js</li>
                     <li>Bootstrap css/js</li>
                     <li>hint.css</li>
@@ -70,11 +75,9 @@
         </div>
     </footer>
 
-    <!--coolie-->
-    <script src="/lib/vendor/jquery.js"></script>
-    <script src="/lib/vendor/bootstrap/js/bootstrap.js"></script>
-    <script src="/lib/app/app.js"></script>
-    <!--/coolie-->
-    <script src="/index/index.js"></script>
+    <script coolie
+            src="/lib/vendor/coolie.js"
+            data-config="/module-config.js"
+            data-main="index/index.js"></script>
 </body>
 </html>
