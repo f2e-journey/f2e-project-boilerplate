@@ -1,4 +1,4 @@
-# 前端工程模版(简单版)项目
+# 前端工程模版(原始版)项目
 
 这是一个前端工程项目的模版, 可以写一些项目的说明, 例如项目的初衷, 目录说明, 线上地址, 配置说明等等
 
@@ -6,11 +6,13 @@
   * 通过 [coolie](https://coolie.ydr.me/introduction/advantage/) 合并 CSS/JS, 并对静态资源进行版本管理
 * [前端工程模版(模块化版)](https://github.com/f2e-journey/f2e-project-boilerplate/tree/module-coolie)
   * 通过 [coolie](https://coolie.ydr.me/guide/build-chunk-module/) 进行模块化开发
+* [前端工程模版(原始版)](https://github.com/f2e-journey/f2e-project-boilerplate/tree/native)
+  * 没有构建过程的原始前端开发方式, 适合非常简单的网站, 例如官网
 
 ## 准备环境
 
 * 安装 [Node.js](https://nodejs.org/)
-* 执行 `npm install` 来安装项目依赖
+* 执行 `npm install puer -g` 来安装开发时使用的[静态服务器](https://github.com/leeluolee/puer)
 
 ## 通用规范
 
@@ -21,10 +23,9 @@
 
 ## 常用命令
 
-在 `src` 目录下可以执行以下命令
+在项目目录下可以执行以下命令
 
-* `npm start` 启动静态服务器(需要先安装 [Puer](https://github.com/leeluolee/puer))
-* `npm run build` 构建项目, 输出到 `dist` 目录
+* `puer` 启动静态服务器
 
 ## 项目规范
 
