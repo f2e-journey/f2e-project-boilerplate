@@ -1,1 +1,4 @@
 /* 功能模块独立的样式 */
+.banner--index {
+    background-image: url(//dummyimage.com/750x380);
+}

@@ -1,2 +1,17 @@
 ﻿/* 项目公共样式 */
 /* 如果比较多可以考虑抽离成单个单个的组件 */
+
+.banner {
+    position: relative;
+    padding-top: 50.6%; /* 占位高度(根据图片的宽高比来计算) = 图片高度 / (图片)容器宽度 * 100 */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.banner__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}

@@ -7,6 +7,7 @@
     <title>官网首页模版</title>
     <link rel="stylesheet" href="lib/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/app/app.css">
+    <link rel="stylesheet" href="index/index.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -15,9 +16,31 @@
     <![endif]-->
 </head>
 <body>
-    <div class="container">
-        <h1>官网首页模版</h1>
-        <p class="lead">模版页内容</p>
+    <div class="banner banner--index">
+        <div class="banner__content">
+            <h1>官网首页模版</h1>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <h2>PC端/移动端适配方法(基于 Bootstrap 栅格系统): </h2>
+            <p>适合两端样式差别不大的网站, 共用同一套代码, 只是通过 <code>media query</code> 做适配</p>
+            <ul>
+                <li>观察设计稿两端大概的样式区别, 例如移动端是两列布局, PC端是三列布局, 移动端某个内容隐藏等等</li>
+                <li>移动先行(Mobile first): 就是先从做移动端(xs)的样式开始</li>
+                <li>PC端简单的以 <code>@media (min-width: 768px)</code> (sm)为断点</li>
+                <li>涉及到栅格的时候灵活使用多套 <code>.col-[xs/sm/md/lg]-*</code> 和 <code>.visible-*</code> / <code>.hidden-*</code></li>
+                <li>尽量避免使用 <code>px</code> 单位, 特别是尽量避免限定(写死)容器内内容的宽度(这样多半是根据设计稿分辨率测量的值, 分辨率不一样时, 就会出现横向的滚动条), 多使用百分比和其他相对单位</li>
+                <li>大部分的适配工作是给予两套(文字)大小或者位置调整</li>
+            </ul>
+            <h3>示例: 移动端只出现 2 个, PC端出现 4 个</h3>
+            <div class="row">
+                <div class="col-xs-6  col-sm-3"><code>col-xs-6  col-sm-3</code></div>
+                <div class="col-xs-6  col-sm-3"><code>col-xs-6  col-sm-3</code></div>
+                <div class="hidden-xs col-sm-3"><code>hidden-xs col-sm-3</code></div>
+                <div class="hidden-xs col-sm-3"><code>hidden-xs col-sm-3</code></div>
+            </div>
+        </div>
     </div>
     <script src="lib/vendor/jquery.min.js"></script>
     <script src="lib/vendor/bootstrap/js/bootstrap.min.js"></script>
