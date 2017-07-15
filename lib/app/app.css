@@ -1,17 +1,21 @@
 ﻿/* 项目公共样式 */
 /* 如果比较多可以考虑抽离成单个单个的组件 */
 
+/* 自适应 banner 区域, 可适配任意的分辨率 */
 .banner {
     position: relative;
-    padding-top: 50.6%; /* 占位高度(根据图片的宽高比来计算) = 图片高度 / (图片)容器宽度 * 100 */
+    padding-top: 50.6%; /* 预留出等比例的占位高度(根据内容图片的宽高比来计算) = 图片高度 / 图片宽度 * 100 */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    overflow: hidden;
 }
+/* 居中显示内容区域, 不管内容图片的宽高比是否符合要求, 都能够做到居中适配 */
 .banner__content {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
+    transform: translate(-50%,-50%); /* 居中显示内容 */
+    max-width: 100%; /* 如果内容是图片, 则需要自适应 */
+    height: auto;
 }
